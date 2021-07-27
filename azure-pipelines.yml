@@ -53,3 +53,10 @@ steps:
     publishWebProjects: True
     arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
     zipAfterPublish: True
+
+- task: AzureWebApp@1
+  inputs:
+    appType: "webApp"
+    azureSubscription: '51fc12be-5b7f-438f-9587-44de67fe5979'
+    appName: 'dotnet-core-app'
+    package: $(System.DefaultWorkingDirectory)/**/*.zip
