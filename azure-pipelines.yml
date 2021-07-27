@@ -59,4 +59,4 @@ steps:
     appType: "webApp"
     azureSubscription: 'dotnet-core-app'
     appName: 'dotnet-core-app'
-    package: $(System.DefaultWorkingDirectory)/**/*.zip
+    package: $(Build.ArtifactStagingDirectory)/**/*.zip
